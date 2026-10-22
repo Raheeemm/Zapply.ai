@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #202433;
+  background: #f5f6fa;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.app {
+  max-width: 950px;
+  margin: auto;
+  padding: 28px 20px;
+}
+
+.header,
+.history-heading,
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.brand span {
+  color: #6554e8;
+}
+
+.tagline,
+.hint,
+.file-info {
+  color: #74798a;
+  font-size: 13px;
+}
+
+.hero {
+  padding: 42px 0 24px;
+}
+
+.eyebrow {
+  color: #6554e8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 44px);
+  letter-spacing: -1.5px;
+}
+
+.hero p:last-child {
+  color: #697083;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.panel {
+  background: white;
+  padding: 26px;
+  border: 1px solid #e7e8ef;
+  border-radius: 16px;
+  margin: 22px 0;
+  box-shadow: 0 6px 25px #20243308;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+h3 {
+  margin-top: 26px;
+  font-size: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 650;
+  font-size: 14px;
+  margin: 20px 0 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #dfe1eb;
+  border-radius: 9px;
+  padding: 12px;
+  color: #202433;
+  background: white;
+}
+
+input[type="file"] {
+  padding: 14px;
+  background: #fafaff;
+}
+
+textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #c9c2ff;
+  border-color: #6554e8;
+}
+
+button {
+  border: none;
+  background: #6554e8;
+  color: white;
+  padding: 12px 17px;
+  border-radius: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+form > button {
+  width: 100%;
+  margin-top: 22px;
+}
+
+.secondary {
+  background: #eeecff;
+  color: #5140ca;
+}
+
+.danger {
+  background: #fff0f0;
+  color: #b42335;
+}
+
+.status {
+  display: inline-block;
+  color: #8b5b00;
+  background: #fff6dc;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.results ul,
+.panel ul {
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.editor-card {
+  padding: 16px;
+  margin: 16px 0;
+  border: 1px solid #e7e8ef;
+  border-radius: 12px;
+  background: #fcfcff;
+}
+
+.actions,
+.history-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actions {
+  margin-top: 24px;
+}
+
+.alert {
+  padding: 14px;
+  border-radius: 9px;
+  margin: 16px 0;
+  overflow-wrap: anywhere;
+}
+
+.error {
+  color: #a21b2d;
+  background: #fff0f0;
+}
+
+.success {
+  color: #176c43;
+  background: #eaf8f0;
+}
+
+.history-item {
+  padding: 16px 0;
+  border-top: 1px solid #ececf2;
+}
+
+.history-item p {
+  color: #777d8e;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.badge {
+  border-radius: 20px;
+  padding: 6px 10px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.badge.pending {
+  background: #fff6dc;
+  color: #8b5b00;
+}
+
+.badge.approved {
+  background: #e5f7eb;
+  color: #176c43;
+}
+
+.badge.rejected {
+  background: #fff0f0;
+  color: #a21b2d;
+}
+
+.download-panel {
+  border-color: #b7e5c8;
+}
+
+footer {
+  text-align: center;
+  color: #85899a;
+  font-size: 12px;
+  padding: 25px 0;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px 14px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .hero {
+    padding-top: 30px;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
