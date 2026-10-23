@@ -30,6 +30,13 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from xml.sax.saxutils import escape
 
+
+FONT_DIR = Path(__file__).resolve().parent / "fonts"
+
+pdfmetrics.registerFont(
+    TTFont("DejaVuSans", str(FONT_DIR / "DejaVuSans.ttf"))
+)
+
 load_dotenv()
 
 app = FastAPI(
@@ -754,6 +761,7 @@ def generate_resume_pdf(resume: ResumeData) -> BytesIO:
         ParagraphStyle(
             name="ResumeName",
             parent=styles["Title"],
+            fontName="DejaVuSans",
             fontSize=21,
             leading=25,
             alignment=TA_CENTER,
@@ -766,6 +774,7 @@ def generate_resume_pdf(resume: ResumeData) -> BytesIO:
         ParagraphStyle(
             name="ResumeContact",
             parent=styles["Normal"],
+            fontName="DejaVuSans",
             fontSize=9,
             leading=13,
             alignment=TA_CENTER,
@@ -777,6 +786,7 @@ def generate_resume_pdf(resume: ResumeData) -> BytesIO:
         ParagraphStyle(
             name="ResumeSection",
             parent=styles["Heading2"],
+            fontName="DejaVuSans",
             fontSize=12,
             leading=15,
             textColor=colors.HexColor("#283593"),
@@ -790,6 +800,7 @@ def generate_resume_pdf(resume: ResumeData) -> BytesIO:
         ParagraphStyle(
             name="ResumeBody",
             parent=styles["BodyText"],
+            fontName="DejaVuSans",
             fontSize=9,
             leading=13,
             spaceAfter=4,
@@ -800,6 +811,7 @@ def generate_resume_pdf(resume: ResumeData) -> BytesIO:
         ParagraphStyle(
             name="ResumeItem",
             parent=styles["BodyText"],
+            fontName="DejaVuSans",
             fontSize=9,
             leading=12,
             leftIndent=12,
